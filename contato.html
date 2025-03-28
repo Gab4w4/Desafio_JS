@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-nos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
+</head>
+<body>
+    <header>
+        <img class="logoMarca" src="img/logo-ford-256.png" alt="Logo-Ford">
+    
+        <nav class="cabecalho">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>    
+
+    <main>
+        <div class="form-container">
+            <img class="img-modelo" src="img/xls 2.2 diesel.jpg" alt="Modelo Ford de Carro">
+
+            <form action="./index.html" method="get">
+                <h2>Sobre você</h2>
+                <label>Nome:</label>
+                <input type="text" placeholder="NOME*" required>
+                <label>Sobrenome:</label>
+                <input type="text" placeholder="SOBRENOME*" required>
+                <label>E-mail:</label>
+                <input type="email" placeholder="E-MAIL*" required>
+                <label>Tel.:</label>
+                <input type="text" placeholder="TELEFONE*" required>
+                <label>Tipo de contato:</label>
+                <select name="contato" id="contato" required>
+                    <option value="" disabled selected>TIPO DE CONTATO</option>
+                    <option value="1">Elogio</option>
+                    <option value="2">Reclamação</option>
+                    <option value="3">Solicitação</option>
+                </select>
+                <label>Mensagem:</label>
+                <textarea class="mensagem-contato" placeholder="MENSAGEM*" required></textarea>
+                <button class="button-contato">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+           
+
+            <div class="iconesRodape">
+                <h2>Redes sociais</h2>
+                <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR" target="_blank">
+                <img class="icon" src="img/facebook-50.png" alt="Icone_Facebook"></a>
+
+                <a href="https://www.youtube.com/@fordbrasil" target="_blank">
+                <img class="icon" src="img/youtube-squared-50.png" alt="Icone_Youtube"></a>
+                
+                <a href="https://www.instagram.com/fordbrasil/" target="_blank">
+                <img class="icon" src="img/instagram-logo-50.png" alt="Icone_Instagram"></a>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
+            </div>
+
+            <img class="logo_rodape" src="img/ford-96.png" alt="Icone_Ford">
+        </div>
+    </footer>
+</body>
+</html>
