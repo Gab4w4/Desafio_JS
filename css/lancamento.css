@@ -98,7 +98,7 @@ main{
 .checkbox {
     width: 20px; 
     height: 20px; 
-    margin-top: 4px; 
+    margin-top: 4px;
 }
 
 .nome-preco{
@@ -159,14 +159,14 @@ main{
 div#compare {
     position: absolute;
     display: none;
-    width: 50vw;
+    width: 60vw;
     max-width: 800px;
     min-width: 400px;
-    height: 80vh;
-    max-height: 700px;
+    height: 150vh;
+    max-height: 1100px;
     min-height: 350px;
     background: #fff;
-    top: calc(100vh - 80%);
+    top: calc(140vh - 80%);
     left: 25vw;
     border-radius: 10px;
     padding: 10px;

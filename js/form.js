@@ -1,27 +1,34 @@
-
+let data;
 //class contato
 
-class contato {
+class Contato {
     
+    constructor(nome, email, telefone, tipoContato, mensagem){
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.tipoContato = tipoContato;
+        this.mensagem = mensagem;
+    }
 }
 
-function Post(form) {
+function Post(form){
 
-  let data = new contato(form.elements.namedItem("nome").value,
-            form.elements.namedItem("sobrenome").value, 
+  data = new Contato(
+            form.elements.namedItem("nome").value,
             form.elements.namedItem("email").value, 
-            form.elements.namedItem("cpf").value, 
             form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value);
-  
+            form.elements.namedItem("tipoContato").value, 
+            form.elements.namedItem("mensagem").value
+        );
+    console.log(data);
 }
 
 function Enviar() {
 
-    var nome = document.getElementById("nomeid");
-
-    if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+    if (data && data.nome) {
+        alert('Obrigado sr(a) ' + data.nome + ' os seus dados foram encaminhados com sucesso');
+        window.location.reload();
     }
 
 }

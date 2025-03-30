@@ -29,12 +29,22 @@ function GetCarArrPosition(arr, carClass) {
 }
 
 function SetCarToCompare(el, carClass) {
-   
+
     if(carClass instanceof Car){       
+        let position = GetCarArrPosition(carArr, carClass);
         if(el.checked){
-            carArr.push(carClass);
-        } else {
-          
+            if(position == -1 && carArr.length < 2){
+                carArr.push(carClass);
+            }
+            else if(carArr.length >= 2){
+                el.checked = false;
+                alert("Só é possível comparar dois carros");
+            }
+        }
+        else {
+            if(position !== -1){
+                carArr.splice(position,1);
+            }
         } 
     } else {
         throw "You need set a Car Class";
@@ -86,6 +96,6 @@ function UpdateCompareTable() {
     document.getElementById('compare_roda_0').textContent = carArr[0].roda;
     document.getElementById('compare_roda_1').textContent = carArr[1].roda;
     
-    document.getElementById('compare_preco_0').textContent = carArr[0].preco;
-    document.getElementById('compare_preco_1').textContent = carArr[1].preco;
+    document.getElementById('compare_preco_0').textContent = carArr[0].preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    document.getElementById('compare_preco_1').textContent = carArr[1].preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 }

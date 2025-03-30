@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
+    <script src="./js/form.js"></script>
 </head>
 <body>
     <header>
@@ -24,26 +25,24 @@
         <div class="form-container">
             <img class="img-modelo" src="img/xls 2.2 diesel.jpg" alt="Modelo Ford de Carro">
 
-            <form action="./index.html" method="get">
+            <form onsubmit="Post(this); return false;">
                 <h2>Sobre você</h2>
                 <label>Nome:</label>
-                <input type="text" placeholder="NOME*" required>
-                <label>Sobrenome:</label>
-                <input type="text" placeholder="SOBRENOME*" required>
+                <input name="nome" type="text" placeholder="NOME*" required>
                 <label>E-mail:</label>
-                <input type="email" placeholder="E-MAIL*" required>
+                <input name="email" type="email" placeholder="E-MAIL*" required>
                 <label>Tel.:</label>
-                <input type="text" placeholder="TELEFONE*" required>
+                <input name="telefone" type="text" placeholder="TELEFONE*" required>
                 <label>Tipo de contato:</label>
-                <select name="contato" id="contato" required>
+                <select name="tipoContato" id="contato" required>
                     <option value="" disabled selected>TIPO DE CONTATO</option>
                     <option value="1">Elogio</option>
                     <option value="2">Reclamação</option>
                     <option value="3">Solicitação</option>
                 </select>
                 <label>Mensagem:</label>
-                <textarea class="mensagem-contato" placeholder="MENSAGEM*" required></textarea>
-                <button class="button-contato">Enviar</button>
+                <textarea name="mensagem" class="mensagem-contato" placeholder="MENSAGEM*" required></textarea>
+                <button onclick="Enviar(this)" class="button-contato">Enviar</button>
             </form>
         </div>
     </main>
