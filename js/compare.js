@@ -1,4 +1,3 @@
-
 //car
 let carArr = [];
 
@@ -58,11 +57,11 @@ function ShowCompare() {
     }
 
     UpdateCompareTable();
-    document.getElementById("compare").style.display = "block";
+    document.getElementById("compare").showModal()
 }
 
 function HideCompare(){
-    document.getElementById("compare").style.display = "none"; 
+    document.getElementById("compare").close()
 }
 
 function UpdateCompareTable() {
