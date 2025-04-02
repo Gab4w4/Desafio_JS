@@ -24,12 +24,17 @@
 
     <main>
         <div id="carousel">
+            <i onclick="Carousel.Prev()" class="bi bi-arrow-left"></i>
             <img alt="Imagem modelo" id="img">
+            <i onclick="Carousel.Next()" class="bi bi-arrow-right"></i>
         </div>
         <div id="carousel-title">
             <a href="" id="link"><p id="descricao"></p></a>
         </div>
+        <br>
             
+        </div>    
+
             <script>
                 //insert each image on carousel
                carouselArr.push(new Carousel("./img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
