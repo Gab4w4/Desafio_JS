@@ -24,8 +24,8 @@
     <main>
         <div class="form-container">
             <img class="img-modelo" src="img/xls 2.2 diesel.jpg" alt="Modelo Ford de Carro">
-
-            <form onsubmit="Post(this); return false;">
+    
+            <form id="meuForm" onsubmit="Post(this); return false;">
                 <h2>Sobre você</h2>
                 <label>Nome:</label>
                 <input name="nome" type="text" placeholder="NOME*" id="nome" required>
@@ -42,16 +42,21 @@
                 </select>
                 <label>Mensagem:</label>
                 <textarea name="mensagem" class="mensagem-contato" id="mensagem" placeholder="MENSAGEM*" required></textarea>
-                <button onclick="Enviar(this)" id="btnEnviar" class="button-contato">Enviar</button>
+                <button id="btnEnviar" class="button-contato">Enviar</button>
                 
                 <div class="pop-up" id="pop-up">
-                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates molestias mollitia veritatis ipsum fugiat eius eveniet cumque tenetur dicta ipsam nisi provident dolores esse neque, optio aut! Quis, corporis unde?</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <button id="buttonConfirm" onclick="Enviar(form)">Confirme</button>
-                    <button id="closePopup">Feche</button>
+                    <h3 style="font-size: 25px;">Confirme seus dados:</h3>
+                    <p><strong>Nome:</strong> <span id="popup-nome"></span></p>
+                    <p><strong>E-mail:</strong> <span id="popup-email"></span></p>
+                    <p><strong>Telefone:</strong> <span id="popup-telefone"></span></p>
+                    <p><strong>Tipo de Contato:</strong> <span id="popup-tipoContato"></span></p>
+                    <p><strong>Mensagem:</strong> <span id="popup-mensagem"></span></p>
+                    
+                    <br><br>
+                    <div class="popup-buttons">
+                        <button id="buttonConfirm" onclick="Enviar()">Confirmar</button>
+                        <button id="closePopup">Fechar</button>
+                    </div>
                 </div>
             </form>
         </div>
