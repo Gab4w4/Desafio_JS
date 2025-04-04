@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
-    <script src="./js/form.js"></script>
+    <script src="./js/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,11 +28,11 @@
             <form onsubmit="Post(this); return false;">
                 <h2>Sobre você</h2>
                 <label>Nome:</label>
-                <input name="nome" type="text" placeholder="NOME*" required>
+                <input name="nome" type="text" placeholder="NOME*" id="nome" required>
                 <label>E-mail:</label>
-                <input name="email" type="email" placeholder="E-MAIL*" required>
+                <input name="email" type="email" placeholder="E-MAIL*" id="email" required>
                 <label>Tel.:</label>
-                <input name="telefone" type="text" placeholder="TELEFONE*" required>
+                <input name="telefone" type="text" placeholder="TELEFONE*" id="telefone" required>
                 <label>Tipo de contato:</label>
                 <select name="tipoContato" id="contato" required>
                     <option value="" disabled selected>TIPO DE CONTATO</option>
@@ -41,8 +41,18 @@
                     <option value="3">Solicitação</option>
                 </select>
                 <label>Mensagem:</label>
-                <textarea name="mensagem" class="mensagem-contato" placeholder="MENSAGEM*" required></textarea>
-                <button onclick="Enviar(this)" class="button-contato">Enviar</button>
+                <textarea name="mensagem" class="mensagem-contato" id="mensagem" placeholder="MENSAGEM*" required></textarea>
+                <button onclick="Enviar(this)" id="btnEnviar" class="button-contato">Enviar</button>
+                
+                <div class="pop-up" id="pop-up">
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates molestias mollitia veritatis ipsum fugiat eius eveniet cumque tenetur dicta ipsam nisi provident dolores esse neque, optio aut! Quis, corporis unde?</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button id="buttonConfirm" onclick="Enviar(form)">Confirme</button>
+                    <button id="closePopup">Feche</button>
+                </div>
             </form>
         </div>
     </main>
@@ -70,5 +80,6 @@
             <img class="logo_rodape" src="img/ford-96.png" alt="Icone_Ford">
         </div>
     </footer>
+
 </body>
 </html>

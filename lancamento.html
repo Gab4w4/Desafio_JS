@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/lancamento.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
-    <script src="js/compare.js"></script>
+    <script src="js/compare.js" defer></script>
 </head>
 <body>
     <header>
@@ -43,11 +43,11 @@
                     <tr>
 
                         <td>
-                            <div class="carro">
+                            <div class="carro" id="comp1">
                                 <img class="icone_carro" src="img/xls 2.2 diesel.jpg" alt="Modelo_XLS2.2">
 
                                 <div class="componentes-carro">
-                                    <input type="checkbox" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', './img/xls 2.2 diesel.jpg'));">
+                                    <input type="checkbox" value="car1" class="checkbox" id="check1" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', './img/xls 2.2 diesel.jpg'));">
                                     <h3>Ford Ranger XLS 2.2 Diesel 4x4 AT 2022</h3>
                                     <img class="icone_info" src="img/info.png" alt="icone_informacao">
                                 </div>
@@ -56,11 +56,11 @@
                         </td>
                         
                         <td>
-                            <div class="carro">
+                            <div class="carro" id="comp2">
                                 <img class="icone_carro"  src="img/XL Cabine.jpg" alt="ModeloXLCabine2.2">
 
                                 <div class="componentes-carro">
-                                    <input type="checkbox" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', './img/XL Cabine.jpg'));">
+                                    <input type="checkbox" value="car1" class="checkbox" id="check2" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', './img/XL Cabine.jpg'));">
                                     <h3>Ford Ranger XL Cabine Simples 2.2 Diesel 4x4 C/P 2022</h3>
                                     <img class="icone_info" src="img/info.png" alt="icone_informacao">
                                 </div>
@@ -69,11 +69,11 @@
                         </td>
                         
                         <td>
-                            <div class="carro">
+                            <div class="carro" id="comp3">
                                 <img class="icone_carro"  src="img/storm.jpg" alt="ModeloStorm3.2">
 
                                 <div class="componentes-carro">
-                                    <input type="checkbox" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', './img/storm.jpg'));">
+                                    <input type="checkbox" value="car1" class="checkbox" id="check3" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', './img/storm.jpg'));">
                                     <h3>Ford Ranger Storm 3.2 Diesel 4x4 AT 2022</h3>
                                     <img class="icone_info" src="img/info.png" alt="icone_informacao">
                                 </div>
@@ -120,8 +120,8 @@
             <tbody>
             <tr >
             <td>&nbsp;</td>
-            <td id="compare_image_0"><img src="" id="imgCompare0"></td>
-            <td id="compare_image_1"><img src="" id="imgCompare1"></td>
+            <td id="compare_image_0"><img src="" id="imgCompare0" class="iconTable"></td>
+            <td id="compare_image_1"><img src="" id="imgCompare1" class="iconTable"></td>
             </tr>
             <tr >
             <td>Modelo</td>

@@ -98,3 +98,4 @@ function UpdateCompareTable() {
     document.getElementById('compare_preco_0').textContent = carArr[0].preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
     document.getElementById('compare_preco_1').textContent = carArr[1].preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 }
+
